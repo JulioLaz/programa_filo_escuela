@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filosofía 6.º Año · Planificación 2026 · Esc. Juri</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:      #04040e;
+  --bg2:     #080818;
+  --surface: #0c0c22;
+  --border:  #1a1a3a;
+  --gold:    #f0c040;
+  --gold2:   #d4a020;
+  --cyan:    #00e5ff;
+  --purple:  #b44ffc;
+  --orange:  #ff6b35;
+  --green:   #39ff7a;
+  --red:     #ff4060;
+  --teal:    #00d4aa;
+  --text:    #e8e0ff;
+  --muted:   #aeaad2;
+  --dim:     #2a2850;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Rajdhani',sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+/* ── PARTICLES ── */
+#particles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.45;}
+
+/* ── HERO ── */
+.hero{
+  position:relative;z-index:1;
+  min-height:100vh;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;
+  padding:2rem 1.5rem;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 50% 40%,#1a0f3a66 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-badge{
+  font-family:'Rajdhani',sans-serif;
+  font-size:0.72rem;letter-spacing:0.4em;text-transform:uppercase;
+  color:var(--cyan);margin-bottom:1.2rem;
+  animation:fadeUp 1s ease both;
+}
+.hero h1{
+  font-family:'Cinzel',serif;
+  font-size:clamp(2.2rem,9vw,5.5rem);
+  font-weight:900;line-height:1.0;
+  background:linear-gradient(135deg,var(--gold) 0%,#fff8e0 45%,var(--gold2) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:fadeUp 1s 0.15s ease both;
+  margin-bottom:0.8rem;
+}
+.hero-sub{
+  font-family:'Crimson Pro',serif;font-size:1.25rem;
+  color:#a09ac0;font-style:italic;max-width:580px;
+  animation:fadeUp 1s 0.3s ease both;margin-bottom:1.2rem;
+}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;
+  animation:fadeUp 1s 0.45s ease both;margin-bottom:2.5rem;
+}
+.meta-chip{
+  font-family:'Rajdhani',sans-serif;font-size:0.68rem;letter-spacing:0.18em;
+  text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:2px;
+  border:1px solid var(--gold2);color:var(--gold2);
+  background:rgba(240,192,64,0.07);
+}
+.scroll-hint{
+  display:flex;flex-direction:column;align-items:center;gap:0.4rem;
+  cursor:pointer;animation:fadeUp 1s 0.9s ease both;
+}
+.scroll-hint span{font-size:0.58rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--muted);}
+.scroll-arrow{width:22px;height:22px;border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(45deg);animation:bounce 1.5s infinite;opacity:0.6;}
+
+/* ── MEANDER ── */
+.meander{
+  width:100%;height:10px;
+  background:repeating-linear-gradient(90deg,transparent 0,transparent 4px,var(--gold2) 4px,var(--gold2) 6px,transparent 6px,transparent 10px,var(--gold2) 10px,var(--gold2) 12px);
+  opacity:0.15;
+}
+
+/* ── NAV ── */
+.nav-bar{
+  position:sticky;top:0;z-index:200;
+  background:rgba(4,4,14,0.94);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{display:flex;overflow-x:auto;scrollbar-width:none;}
+.nav-inner::-webkit-scrollbar{display:none;}
+.nav-tab{
+  display:flex;align-items:center;gap:0.4rem;
+  padding:0.8rem 1rem;border:none;background:transparent;cursor:pointer;
+  font-family:'Rajdhani',sans-serif;font-size:0.62rem;font-weight:600;
+  letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);
+  border-bottom:2px solid transparent;transition:all 0.2s;white-space:nowrap;flex-shrink:0;
+}
+.nav-tab .nt{width:18px;height:18px;border-radius:50%;background:var(--dim);display:flex;align-items:center;justify-content:center;font-size:0.58rem;transition:all 0.2s;}
+.nav-tab:hover{color:var(--text);}
+.nav-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
+.nav-tab.active .nt{background:var(--gold);color:#000;}
+.progress-bar{height:2px;background:linear-gradient(90deg,var(--gold),var(--cyan));width:0%;transition:width 0.3s;}
+
+/* ── SECTION ── */
+.section{position:relative;z-index:1;padding:3rem 0 2rem;}
+.sec-header{
+  padding:0 1.2rem 2rem;
+  opacity:0;transform:translateY(28px);transition:all 0.7s ease;
+}
+.sec-header.visible{opacity:1;transform:none;}
+.sec-label{font-family:'Rajdhani',sans-serif;font-size:0.7rem;letter-spacing:0.35em;text-transform:uppercase;}
+.sec-title{
+  font-family:'Cinzel',serif;font-size:clamp(1.3rem,4vw,2.2rem);
+  font-weight:700;line-height:1.1;margin:0.3rem 0;
+}
+.sec-tagline{font-family:'Crimson Pro',serif;font-size:1.1rem;font-style:italic;color:#7870a0;max-width:600px;}
+
+/* colores por unidad */
+.u0 .sec-label,.u0 .sec-tagline b{color:var(--cyan);}
+.u0 .sec-title{background:linear-gradient(135deg,var(--cyan),#00aacc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.u1 .sec-label{color:var(--gold);}
+.u1 .sec-title{background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.u2 .sec-label{color:var(--purple);}
+.u2 .sec-title{background:linear-gradient(135deg,var(--purple),#8822cc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.u3 .sec-label{color:var(--orange);}
+.u3 .sec-title{background:linear-gradient(135deg,var(--orange),#cc4400);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.u4 .sec-label{color:var(--green);}
+.u4 .sec-title{background:linear-gradient(135deg,var(--green),#00cc55);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
+/* ── CONTEXT BOX ── */
+.ctx-box{
+  margin:0 1.2rem 2rem;padding:1.1rem 1.4rem;
+  background:var(--surface);border:1px solid var(--border);border-radius:4px;
+  position:relative;overflow:hidden;
+  opacity:0;transform:translateY(16px);transition:all 0.7s 0.1s ease;
+}
+.ctx-box.visible{opacity:1;transform:none;}
+.ctx-box::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;}
+.u0 .ctx-box::before{background:var(--cyan);}
+.u1 .ctx-box::before{background:var(--gold);}
+.u2 .ctx-box::before{background:var(--purple);}
+.u3 .ctx-box::before{background:var(--orange);}
+.u4 .ctx-box::before{background:var(--green);}
+.ctx-label{font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;}
+.ctx-text{font-family:'Crimson Pro',serif;font-size:1.1rem;color:#b0a8cc;line-height:1.7;}
+
+/* ── TEMA CARDS ── */
+.cards-grid{display:flex;flex-direction:column;gap:0;}
+.tema-card{
+  border-bottom:1px solid var(--border);overflow:hidden;
+  opacity:0;transform:translateX(-18px);transition:all 0.6s ease;
+  background:var(--bg);
+}
+.tema-card.visible{opacity:1;transform:none;}
+.tema-card.open{background:var(--bg2);}
+.card-trigger{display:flex;align-items:stretch;cursor:pointer;user-select:none;transition:background 0.15s;-webkit-tap-highlight-color:transparent;}
+.card-trigger:active{background:rgba(255,255,255,0.03);}
+.card-glyph{width:52px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:rgba(255,255,255,0.03);border-right:1px solid var(--border);}
+.card-main{flex:1;padding:0.9rem 1rem;display:flex;flex-direction:column;gap:0.2rem;}
+.card-top{display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;}
+.card-num{font-family:'Rajdhani',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.12em;}
+.card-badge{font-family:'Rajdhani',sans-serif;font-size:0.5rem;letter-spacing:0.16em;text-transform:uppercase;padding:0.08rem 0.45rem;border-radius:2px;border:1px solid currentColor;}
+.card-name{font-family:'Cinzel',serif;font-size:1rem;font-weight:700;color:var(--text);line-height:1.2;}
+.card-desc{font-family:'Crimson Pro',serif;font-size:1rem;font-style:italic;color:#7870a0;}
+.card-arrow{padding:0.9rem 0.8rem;display:flex;align-items:center;color:var(--muted);font-size:1rem;flex-shrink:0;transition:transform 0.25s,color 0.2s;}
+.tema-card.open .card-arrow{transform:rotate(180deg);}
+
+/* colores por unidad en cards */
+.u1 .card-num,.u1 .card-badge{color:var(--gold);}
+.u2 .card-num,.u2 .card-badge{color:var(--purple);}
+.u3 .card-num,.u3 .card-badge{color:var(--orange);}
+
+/* card body */
+.card-body{display:none;padding:0 1.3rem 1.4rem;}
+.tema-card.open .card-body{display:block;}
+.body-sec{margin-bottom:1rem;}
+.body-sec:last-child{margin-bottom:0;}
+.bs-label{
+  font-family:'Rajdhani',sans-serif;font-size:0.72rem;letter-spacing:0.26em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem;
+  display:flex;align-items:center;gap:0.5rem;
+}
+.bs-label::after{content:'';flex:1;height:1px;background:var(--border);}
+.bs-text{font-family:'Crimson Pro',serif;font-size:1rem;color:#b8b0d0;line-height:1.7;}
+.chips{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:0.6rem;}
+.chip{
+  font-family:'Rajdhani',sans-serif;font-size:0.62rem;letter-spacing:0.08em;
+  padding:0.2rem 0.55rem;border-radius:20px;
+  background:rgba(255,255,255,0.05);border:1px solid var(--border);color:#6a6490;
+}
+.chip-act{background:rgba(0,229,255,0.07);border-color:rgba(0,229,255,0.25);color:var(--cyan);}
+.chip-proj{background:rgba(240,192,64,0.1);border-color:rgba(240,192,64,0.3);color:var(--gold);}
+
+/* ── ACTIVIDADES GRID ── */
+.act-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:0;margin:0;
+}
+.act-card{
+  padding:1.2rem 1.3rem;border:1px solid var(--border);border-radius:0;
+  background:var(--surface);margin:-1px 0 0 -1px;
+  opacity:0;transform:translateY(16px);transition:all 0.5s ease;
+}
+.act-card.visible{opacity:1;transform:none;}
+.act-icon{font-size:1.8rem;margin-bottom:0.6rem;}
+.act-name{font-family:'Cinzel',serif;font-size:0.9rem;font-weight:700;color:var(--text);margin-bottom:0.3rem;}
+.act-ped{font-family:'Crimson Pro',serif;font-size:0.9rem;color:#9890b8;line-height:1.55;margin-bottom:0.5rem;}
+.act-valor{
+  font-family:'Rajdhani',sans-serif;font-size:0.62rem;letter-spacing:0.1em;
+  text-transform:uppercase;padding:0.2rem 0.6rem;border-radius:2px;
+  border:1px solid currentColor;display:inline-block;
+}
+
+/* ── EVAL TABLE ── */
+.eval-grid{margin:0 1.2rem;overflow-x:auto;}
+.eval-table{width:100%;border-collapse:collapse;min-width:480px;}
+.eval-table th{
+  font-family:'Rajdhani',sans-serif;font-size:0.65rem;letter-spacing:0.2em;
+  text-transform:uppercase;padding:0.7rem 1rem;background:var(--surface);
+  color:var(--muted);border:1px solid var(--border);text-align:left;
+}
+.eval-table td{
+  font-family:'Crimson Pro',serif;font-size:0.95rem;
+  padding:0.7rem 1rem;border:1px solid var(--border);color:#b0a8cc;line-height:1.5;
+  vertical-align:top;
+}
+.eval-table tr:nth-child(even) td{background:rgba(255,255,255,0.02);}
+.badge-req{background:rgba(255,64,96,0.15);color:var(--red);border:1px solid rgba(255,64,96,0.3);padding:0.15rem 0.5rem;border-radius:2px;font-family:'Rajdhani',sans-serif;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;font-style:normal;}
+.badge-cal{background:rgba(240,192,64,0.12);color:var(--gold);border:1px solid rgba(240,192,64,0.3);padding:0.15rem 0.5rem;border-radius:2px;font-family:'Rajdhani',sans-serif;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;font-style:normal;}
+.badge-comp{background:rgba(174,170,210,0.1);color:var(--muted);border:1px solid var(--border);padding:0.15rem 0.5rem;border-radius:2px;font-family:'Rajdhani',sans-serif;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;font-style:normal;}
+
+/* ── NEXO ── */
+.nexo{
+  margin:1rem 1.2rem;padding:0.8rem 1rem;border-radius:4px;
+  display:flex;align-items:flex-start;gap:0.7rem;
+  background:rgba(255,255,255,0.03);border:1px dashed var(--border);
+  opacity:0;transform:translateY(10px);transition:all 0.5s ease;
+}
+.nexo.visible{opacity:1;transform:none;}
+.nexo-text{font-family:'Crimson Pro',serif;font-size:0.95rem;font-style:italic;color:#7870a0;line-height:1.6;}
+.nexo-text strong{font-style:normal;font-weight:600;color:#a098c0;}
+
+/* ── FINAL ── */
+.final{
+  padding:3rem 1.4rem;text-align:center;
+  background:radial-gradient(ellipse 80% 60% at 50% 100%,rgba(240,192,64,0.07) 0%,transparent 70%);
+  border-top:1px solid var(--border);position:relative;z-index:1;
+}
+.final-title{
+  font-family:'Cinzel',serif;font-size:clamp(1rem,4vw,1.7rem);font-weight:700;
+  background:linear-gradient(135deg,var(--gold),#fff8e0,var(--gold2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:0.8rem;
+}
+.final-text{font-family:'Crimson Pro',serif;font-size:1rem;color:#8880aa;font-style:italic;max-width:520px;margin:0 auto 1.5rem;line-height:1.7;}
+.final-footer{font-family:'Rajdhani',sans-serif;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--border);padding-top:1.2rem;}
+
+/* ── KEYFRAMES ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:none;}}
+@keyframes bounce{0%,100%{transform:rotate(45deg) translateY(0);}50%{transform:rotate(45deg) translateY(5px);}}
+
+/* stagger cards */
+.tema-card:nth-child(1){transition-delay:0s;}
+.tema-card:nth-child(2){transition-delay:0.08s;}
+.tema-card:nth-child(3){transition-delay:0.16s;}
+.tema-card:nth-child(4){transition-delay:0.24s;}
+.tema-card:nth-child(5){transition-delay:0.32s;}
+.tema-card:nth-child(6){transition-delay:0.40s;}
+.tema-card:nth-child(7){transition-delay:0.48s;}
+.tema-card:nth-child(8){transition-delay:0.56s;}
+.tema-card:nth-child(9){transition-delay:0.64s;}
+.tema-card:nth-child(10){transition-delay:0.72s;}
+.tema-card:nth-child(11){transition-delay:0.80s;}
+.tema-card:nth-child(12){transition-delay:0.88s;}
+</style>
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<!-- ══ HERO ══════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-badge">Escuela Amado Nicomedes Juri · Tucumán</div>
+  <h1>Filosofía<br>6.º Año</h1>
+  <p class="hero-sub">Planificación anual 2026 · Prof. Julio Alberto Lazarte</p>
+  <div class="hero-meta">
+    <span class="meta-chip">3 Unidades</span>
+    <span class="meta-chip">+25 temas</span>
+    <span class="meta-chip">App interactiva</span>
+    <span class="meta-chip">Proyectos finales</span>
+    <span class="meta-chip">IA filosófica</span>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:1.2rem;animation:fadeUp 1s 0.9s ease both;">
+    <a href="Programa_Filosofia_2026.pdf" download
+       style="display:inline-flex;align-items:center;gap:0.55rem;font-family:'Rajdhani',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;text-decoration:none;padding:0.6rem 1.4rem;border-radius:3px;background:rgba(240,192,64,0.12);border:1px solid var(--gold2);color:var(--gold);transition:background 0.2s,border-color 0.2s;"
+       onmouseover="this.style.background='rgba(240,192,64,0.22)';this.style.borderColor='var(--gold)'"
+       onmouseout="this.style.background='rgba(240,192,64,0.12)';this.style.borderColor='var(--gold2)'">
+      &#11015; Descargar programa PDF
+    </a>
+    <div class="scroll-hint" onclick="document.querySelector('.nav-bar').scrollIntoView({behavior:'smooth'})" style="animation:none;">
+      <span>Ver programa</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </div>
+</section>
+
+<div class="meander"></div>
+
+<!-- ══ NAV ══════════════════════════════════════════════════════ -->
+<nav class="nav-bar" id="mainNav">
+  <div class="nav-inner">
+    <button class="nav-tab active" data-sec="s0" onclick="goSec('s0')"><span class="nt">★</span>Presentación</button>
+    <button class="nav-tab" data-sec="s1" onclick="goSec('s1')"><span class="nt">I</span>¿Qué es Filosofía?</button>
+    <button class="nav-tab" data-sec="s2" onclick="goSec('s2')"><span class="nt">II</span>Antropología</button>
+    <button class="nav-tab" data-sec="s3" onclick="goSec('s3')"><span class="nt">III</span>Ética</button>
+    <button class="nav-tab" data-sec="s4" onclick="goSec('s4')"><span class="nt">⚙</span>Actividades</button>
+    <button class="nav-tab" data-sec="s5" onclick="goSec('s5')"><span class="nt">✓</span>Evaluación</button>
+  </div>
+  <div class="progress-bar" id="progressBar"></div>
+</nav>
+
+<!-- ══ S0: PRESENTACIÓN ══════════════════════════════════════════ -->
+<section class="section u0" id="s0">
+  <div class="sec-header">
+    <div class="sec-label">Sobre esta materia</div>
+    <div class="sec-title">¿Por qué Filosofía?</div>
+    <div class="sec-tagline">El primer saber que no enseña respuestas: enseña a preguntar.</div>
+  </div>
+  <div class="ctx-box">
+    <div class="ctx-label">📌 Fundamentación</div>
+    <div class="ctx-text">
+      La Filosofía forma individuos críticos capaces de interpretar su realidad desde perspectivas profundas y fundamentadas. En un mundo donde la inteligencia artificial transforma las dinámicas sociales, culturales y éticas, la reflexión filosófica es más urgente que nunca: ¿qué significa ser humano? ¿cómo debemos actuar? ¿qué es verdadero?
+    </div>
+  </div>
+  <div class="ctx-box">
+    <div class="ctx-label">🎮 Modelo pedagógico 2026</div>
+    <div class="ctx-text">
+      Esta materia se cursa con una <strong style="color:var(--cyan)">app educativa interactiva gamificada</strong>, accesible desde el celular. Cada tema incluye material de lectura con voz, quiz cronometrado, caza de conceptos, textos para completar, crucigrama filosófico, mapa conceptual y diálogos con filósofos virtuales mediante IA. El progreso se registra automáticamente. Cada unidad cierra con un <strong style="color:var(--gold)">proyecto final integrador</strong>.
+    </div>
+  </div>
+  <div class="nexo">
+    <div style="font-size:1.2rem">🎯</div>
+    <div class="nexo-text"><strong>Expectativas de logro:</strong> Identificar problemáticas filosóficas · Comprender la ética de la IA · Desarrollar pensamiento crítico y argumentación · Aplicar criterios filosóficos a situaciones cotidianas · Completar todas las actividades digitales · Presentar el proyecto final de cada unidad.</div>
+  </div>
+</section>
+
+<div class="meander"></div>
+
+<!-- ══ S1: UNIDAD I ══════════════════════════════════════════════ -->
+<section class="section u1" id="s1">
+  <div class="sec-header">
+    <div class="sec-label">Unidad I · Apps standalone · GitHub Pages</div>
+    <div class="sec-title">¿Qué es Filosofía?</div>
+    <div class="sec-tagline">De la Línea del Tiempo al Arché. El asombro como comienzo.</div>
+  </div>
+  <div class="ctx-box">
+    <div class="ctx-label">📱 Modalidad</div>
+    <div class="ctx-text">Apps HTML autocontenidas, estética filosófica/cyberpunk, optimizadas para móvil. Sin necesidad de cuenta ni login. Los temas 1.4 y 1.5 se incorporan durante el ciclo lectivo 2026.</div>
+  </div>
+
+  <div class="cards-grid">
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">🗓️</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">Tema 1.1</span><span class="card-badge">App lista</span></div>
+          <div class="card-name">Línea del Tiempo Global</div>
+          <div class="card-desc">Contexto histórico: de las primeras civilizaciones al pensamiento contemporáneo.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec">
+          <div class="bs-label">Contenido</div>
+          <div class="bs-text">Recorrido cronológico interactivo por los hitos filosóficos de la humanidad. Permite contextualizar a cada filósofo en su época histórica y cultural.</div>
+        </div>
+        <div class="chips">
+          <span class="chip chip-act">📅 Línea del tiempo interactiva</span>
+          <span class="chip chip-act">📱 Móvil optimizado</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">🤔</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">Tema 1.2</span><span class="card-badge">App lista</span></div>
+          <div class="card-name">¿Qué es Filosofar?</div>
+          <div class="card-desc">Etimología, origen y significado. El asombro como punto de partida del pensamiento.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec">
+          <div class="bs-label">Contenido</div>
+          <div class="bs-text">Diferencia entre preguntas filosóficas, científicas y cotidianas. El thaumazein (asombro) como origen de la filosofía. Secciones interactivas con ejemplos cotidianos.</div>
+        </div>
+        <div class="chips">
+          <span class="chip chip-act">📖 Contenido interactivo</span>
+          <span class="chip chip-act">🧩 Secciones navegables</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">⚡</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">Tema 1.3</span><span class="card-badge">App lista</span></div>
+          <div class="card-name">Del Arché a la Metafísica</div>
+          <div class="card-desc">Presocráticos · Sofistas · Sócrates · Platón · Aristóteles. El viaje completo del pensamiento griego.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec">
+          <div class="bs-label">Contenido</div>
+          <div class="bs-text">7 capítulos navegables: Escuela de Mileto, Heráclito vs. Parménides, Pluralistas y Atomistas, Sofistas, Sócrates, Platón y Aristóteles. Cards expandibles, términos griegos interactivos.</div>
+        </div>
+        <div class="chips">
+          <span class="chip chip-act">7 capítulos</span><span class="chip chip-act">Cards interactivas</span><span class="chip chip-act">Términos griegos</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">🌀</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">Tema 1.4</span><span class="card-badge" style="color:var(--cyan);border-color:var(--cyan)">En desarrollo</span></div>
+          <div class="card-name">El Asombro, la Duda y las Situaciones Límite</div>
+          <div class="card-desc">Thaumazein · Duda cartesiana · Jaspers y las situaciones límite: muerte, sufrimiento, culpa y lucha.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec">
+          <div class="bs-label">Autores</div>
+          <div class="bs-text">Aristóteles (asombro como inicio), Descartes (duda metódica y cogito), Karl Jaspers (situaciones límite como umbral de lo filosófico). Conecta la filosofía con experiencias vitales concretas del alumno.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">📱</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">Tema 1.5</span><span class="card-badge" style="color:var(--cyan);border-color:var(--cyan)">En desarrollo</span></div>
+          <div class="card-name">Filosofía, Redes Sociales y Post-verdad</div>
+          <div class="card-desc">Byung-Chul Han · Burbujas algorítmicas · Identidad digital · Post-verdad en la era del celu.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec">
+          <div class="bs-label">Contenido</div>
+          <div class="bs-text">Sociedad del rendimiento (Han). Cómo los algoritmos moldean lo que pensamos y creemos. El problema de la verdad en las redes. Identidad digital y autenticidad. Filosofía aplicada al universo cotidiano del alumno.</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /cards -->
+</section>
+
+<div class="meander"></div>
+
+<!-- ══ S2: UNIDAD II ═════════════════════════════════════════════ -->
+<section class="section u2" id="s2">
+  <div class="sec-header">
+    <div class="sec-label">Unidad II · App prueba_filo · Firebase</div>
+    <div class="sec-title">Antropología Filosófica</div>
+    <div class="sec-tagline">El ser humano como el animal que se pregunta a sí mismo.</div>
+  </div>
+  <div class="ctx-box">
+    <div class="ctx-label">💡 Propósito de la unidad</div>
+    <div class="ctx-text">Construir progresivamente una visión integral del ser humano contrastando posiciones históricas, existenciales y contemporáneas. Cierra con un <strong style="color:var(--gold)">Proyecto Final integrador</strong> con rúbrica y exposición.</div>
+  </div>
+
+  <div class="cards-grid">
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">🧩</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">2.1</span><span class="card-badge">Intro</span></div>
+          <div class="card-name">El Ser Humano como Problema</div>
+          <div class="card-desc">¿Qué nos distingue del resto de los seres vivos? La pregunta que abre la Antropología Filosófica.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Contenido</div><div class="bs-text">Introducción a la Antropología Filosófica. La paradoja de ser el único ser que se interroga sobre sí mismo. Perspectivas biológicas, culturales y filosóficas de "lo humano".</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">ⰰ</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">2.2</span><span class="card-badge">Existencia</span></div>
+          <div class="card-name">La Vida, la Convivencia y la Muerte</div>
+          <div class="card-desc">Las tres dimensiones de la existencia humana. La muerte como hecho filosófico central.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Autores</div><div class="bs-text">Heidegger (ser-para-la-muerte), Savater (el ser mortal), Hannah Arendt (vita activa). La convivencia como condición de lo humano. La muerte como hecho que dota de sentido a la vida.</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">🌊</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">2.3</span><span class="card-badge">Clásico</span></div>
+          <div class="card-name">Platón y Aristóteles: Cuerpo y Alma</div>
+          <div class="card-desc">Dualismo platónico vs. hilemorfismo aristotélico. El debate sobre la inmortalidad.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Debate clásico</div><div class="bs-text">Platón: alma prisionera del cuerpo, inmortal, preexistente. Aristóteles: alma como forma del cuerpo (hilemorfismo), mortal con el cuerpo. El problema de la identidad personal y la conciencia.</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">🏛️</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">2.4</span><span class="card-badge">Historia</span></div>
+          <div class="card-name">Concepciones Tradicionales del Hombre</div>
+          <div class="card-desc">Animal racional · Imagen de Dios · Ser social · Ser histórico. El recorrido por la historia del humanismo.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Contenido</div><div class="bs-text">Desde Aristóteles (animal racional y político) hasta el humanismo cristiano (imago Dei), el Renacimiento (Pico della Mirandola), la Ilustración y el ser histórico de Hegel. Cómo cada época redefinió "lo humano".</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">⚙️</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">2.5</span><span class="card-badge">Marx</span></div>
+          <div class="card-name">Marx: La Alienación</div>
+          <div class="card-desc">El trabajo como expresión humana y su deformación bajo el capitalismo. Relevancia actual.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Concepto clave</div><div class="bs-text">Alienación económica (el trabajador no es dueño del producto), política (el Estado como instrumento de clase) y religiosa (la religión como opio del pueblo). ¿Qué formas de alienación existen hoy en las redes, el consumo y la tecnología?</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span><span class="chip chip-act">🤖 Diálogo IA</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">⚡</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">2.6</span><span class="card-badge">Nietzsche</span></div>
+          <div class="card-name">Nietzsche: El Superhombre</div>
+          <div class="card-desc">La muerte de Dios · Voluntad de poder · Eterno retorno · Crítica a la moral del rebaño.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Concepto clave</div><div class="bs-text">"Dios ha muerto" como diagnóstico cultural. El nihilismo y su superación. El Übermensch (superhombre) como aquel que crea sus propios valores. La voluntad de poder como afirmación de la vida.</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span><span class="chip chip-act">🤖 Diálogo IA</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">🔬</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">2.7</span><span class="card-badge">Descartes</span></div>
+          <div class="card-name">Descartes: La Duda Existencial</div>
+          <div class="card-desc">Cogito ergo sum · Duda metódica · El problema mente-cuerpo · Relevancia en la era de la IA.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Concepto clave</div><div class="bs-text">La duda metódica como camino a la certeza absoluta. "Pienso, luego existo" (cogito ergo sum). El dualismo cartesiano mente/cuerpo y sus consecuencias. ¿Puede una IA pensar? ¿Puede dudar?</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">🔧</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">2.8</span><span class="card-badge">Maliandi</span></div>
+          <div class="card-name">Maliandi: El Animal Técnico</div>
+          <div class="card-desc">La tecnología como extensión del ser humano. Responsabilidad ética ante la técnica.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Autor</div><div class="bs-text">Ricardo Maliandi (1930–2015), filósofo argentino. El ser humano como el único animal que fabrica herramientas que luego lo transforman a él. La técnica como mediación entre el ser humano y la naturaleza. Ética de la responsabilidad tecnológica.</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">💀</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">2.9</span><span class="card-badge">Savater</span></div>
+          <div class="card-name">Savater: El Ser Mortal</div>
+          <div class="card-desc">La finitud como clave de la existencia. La conciencia de la muerte define la libertad y el proyecto vital.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Autor</div><div class="bs-text">Fernando Savater (1947–). La muerte como el horizonte que da urgencia y sentido a la vida. A diferencia de los animales, el ser humano sabe que va a morir — y eso lo cambia todo. Relación con la ética y el proyecto personal.</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">🎭</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">2.10</span><span class="card-badge">Cassirer</span></div>
+          <div class="card-name">Cassirer: El Animal Simbólico</div>
+          <div class="card-desc">El ser humano como creador de símbolos y cultura. Lenguaje, mito, arte y ciencia como formas simbólicas.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Autor</div><div class="bs-text">Ernst Cassirer (1874–1945). El ser humano no responde al estímulo directamente sino a través de un sistema simbólico (lenguaje, mito, arte, ciencia, religión). Lo que nos hace humanos no es la razón sino la capacidad de crear y habitar mundos simbólicos.</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span><span class="chip chip-act">🤖 Diálogo IA</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">🌀</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">2.11</span><span class="card-badge">Sartre</span></div>
+          <div class="card-name">Sartre: Libertad, Desamparo y Desesperación</div>
+          <div class="card-desc">La existencia precede a la esencia. Estamos condenados a ser libres. La mala fe.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Autor</div><div class="bs-text">Jean-Paul Sartre (1905–1980). No hay naturaleza humana previa a la existencia: primero existimos, luego nos definimos. La libertad como condena: no podemos no elegir. La mala fe es el autoengaño para escapar de esa responsabilidad.</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span><span class="chip chip-act">🤖 Diálogo IA</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card" style="background:rgba(180,79,252,0.06);border-bottom:none;">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">📌</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num" style="color:var(--gold)">Proyecto Final</span><span class="card-badge chip-proj">Integrador</span></div>
+          <div class="card-name">Proyecto Final — Unidad II</div>
+          <div class="card-desc">Producción integradora: ensayo, afiche conceptual o presentación grupal sobre la condición humana.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Formatos posibles</div><div class="bs-text">Ensayo filosófico personal · Afiche conceptual con mapa de autores · Presentación multimedia grupal · Debate sobre un dilema de la condición humana contemporánea. Incluye rúbrica de evaluación y exposición oral ante el grupo.</div></div>
+        <div class="chips"><span class="chip chip-proj">📝 Ensayo</span><span class="chip chip-proj">🎨 Afiche</span><span class="chip chip-proj">🗣️ Debate</span><span class="chip chip-proj">📊 Presentación</span></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="nexo" style="margin-top:1rem;">
+    <div style="font-size:1.2rem">💜</div>
+    <div class="nexo-text"><strong>Valor formativo de la Unidad II:</strong> La reflexión sobre la propia existencia — la libertad, la muerte, la técnica, el símbolo — promueve el autoconocimiento, la empatía y la responsabilidad ética. Cada autor es un espejo para mirarnos a nosotros mismos.</div>
+  </div>
+</section>
+
+<div class="meander"></div>
+
+<!-- ══ S3: UNIDAD III ════════════════════════════════════════════ -->
+<section class="section u3" id="s3">
+  <div class="sec-header">
+    <div class="sec-label">Unidad III · App prueba_filo · 6 actividades por tema</div>
+    <div class="sec-title">Ética</div>
+    <div class="sec-tagline">¿Cómo debemos actuar? La pregunta más urgente de la filosofía.</div>
+  </div>
+  <div class="ctx-box">
+    <div class="ctx-label">💡 Propósito de la unidad</div>
+    <div class="ctx-text">Recorrer las principales corrientes éticas para dotar al alumno de herramientas conceptuales para analizar dilemas reales. El cierre con IA conecta la filosofía con los desafíos del presente.</div>
+  </div>
+
+  <div class="cards-grid">
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">🧭</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">3.1–3.2</span><span class="card-badge">Intro</span></div>
+          <div class="card-name">Ética y Moral: Los Problemas Éticos</div>
+          <div class="card-desc">Distinción entre ética y moral. Los grandes problemas del obrar humano.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Contenido</div><div class="bs-text">Ética como reflexión filosófica sobre el bien y el mal. Moral como conjunto de normas sociales. ¿Qué hace que una acción sea buena o mala? Dilemas morales cotidianos como punto de partida.</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">🏛️</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">3.3</span><span class="card-badge">Aristóteles</span></div>
+          <div class="card-name">Ética Aristotélica: Lo Bueno es la Felicidad</div>
+          <div class="card-desc">Eudaimonía · Virtud como hábito · Término medio · Phronesis (prudencia).</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Concepto clave</div><div class="bs-text">La felicidad (eudaimonía) como plenitud de las capacidades propias, no como placer. La virtud como hábito que se aprende y practica. El "término medio" entre el exceso y el defecto. La prudencia (phronesis) como virtud máxima.</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span><span class="chip chip-act">🤖 Diálogo IA</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">🌸</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">3.4</span><span class="card-badge">Hedonismo</span></div>
+          <div class="card-name">Hedonismo: El Placer como Fin de la Vida</div>
+          <div class="card-desc">Epicuro · Aristipo · Bentham · El placer como fundamento moral.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Debate</div><div class="bs-text">Epicuro: el placer verdadero es la ataraxia (ausencia de dolor), no el placer desbordado. Aristipo: el placer presente y sensible como bien máximo. Bentham: cálculo hedonista para medir placeres y dolores. ¿El hedonismo justifica cualquier placer?</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">🎯</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">3.5</span><span class="card-badge">Mill</span></div>
+          <div class="card-name">Utilitarismo: La Mayor Felicidad Posible</div>
+          <div class="card-desc">Bentham y Mill · Principio de utilidad · Placeres superiores e inferiores.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Concepto clave</div><div class="bs-text">Una acción es buena si maximiza la felicidad del mayor número de personas. Mill distingue placeres cualitativamente: "es mejor ser Sócrates insatisfecho que un cerdo satisfecho". Aplicaciones en políticas públicas, salud y dilemas contemporáneos.</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">🛠️</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">3.6</span><span class="card-badge">Pragmatismo</span></div>
+          <div class="card-name">Pragmatismo: Lo Verdadero es lo Práctico</div>
+          <div class="card-desc">Peirce · James · Dewey · La verdad como utilidad práctica.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Concepto clave</div><div class="bs-text">Una idea es verdadera si funciona, si produce resultados prácticos. Peirce: el significado de un concepto = sus consecuencias prácticas. James: la verdad como lo que es bueno para nosotros creer. Dewey: la educación como experiencia activa y transformadora.</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">⚖️</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">3.7</span><span class="card-badge">Kant</span></div>
+          <div class="card-name">Kant: Lo Bueno es lo que se Hace por Deber</div>
+          <div class="card-desc">Imperativo categórico · Dignidad humana · Deontología · Ética del deber.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Concepto clave</div><div class="bs-text">Actúa solo según aquella máxima que puedas querer que sea ley universal. La buena voluntad como único bien incondicional. Trata a las personas siempre como fines, nunca solo como medios. La dignidad humana como valor absoluto.</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span><span class="chip chip-act">🤖 Diálogo IA</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">👤</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">3.8</span><span class="card-badge">Renacimiento</span></div>
+          <div class="card-name">El Antropocentrismo</div>
+          <div class="card-desc">Pico della Mirandola · El Renacimiento · Consecuencias ecológicas y sociales del humanismo moderno.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Contenido</div><div class="bs-text">El ser humano como centro del universo (Renacimiento). Pico della Mirandola: "Dignidad del Hombre". El antropocentrismo moderno y sus consecuencias: dominio de la naturaleza, crisis ecológica. Críticas contemporáneas: biocentrismo, ecocentrismo.</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">🤖</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num">3.9</span><span class="card-badge" style="color:var(--green);border-color:var(--green)">Cierre</span></div>
+          <div class="card-name">Ética Crítica: Inteligencia Artificial</div>
+          <div class="card-desc">IA y autonomía · Decisiones algorítmicas · Privacidad, sesgo y dignidad humana en la era digital.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Autores</div><div class="bs-text">Harari (21 Lecciones), Floridi (Ética de la IA), Cortina (ética aplicada). ¿Puede una IA tomar decisiones morales? ¿Quién es responsable cuando un algoritmo discrimina? La dignidad humana como límite ético de la automatización.</div></div>
+        <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span><span class="chip chip-act">🤖 Diálogo IA</span></div>
+      </div>
+    </div>
+
+    <div class="tema-card" style="background:rgba(255,107,53,0.06);border-bottom:none;">
+      <div class="card-trigger" onclick="toggleCard(this)">
+        <div class="card-glyph">📌</div>
+        <div class="card-main">
+          <div class="card-top"><span class="card-num" style="color:var(--gold)">Proyecto Final</span><span class="card-badge chip-proj">Integrador</span></div>
+          <div class="card-name">Proyecto Final — Unidad III</div>
+          <div class="card-desc">Análisis ético de un dilema contemporáneo real: IA, redes sociales, medio ambiente, justicia social.</div>
+        </div>
+        <div class="card-arrow">▾</div>
+      </div>
+      <div class="card-body">
+        <div class="body-sec"><div class="bs-label">Formatos posibles</div><div class="bs-text">Ensayo argumentativo sobre un dilema ético real · Debate filosófico estructurado · Presentación multimedia con análisis desde múltiples corrientes éticas · Campaña de concientización filosófica. Incluye rúbrica de evaluación y exposición oral.</div></div>
+        <div class="chips"><span class="chip chip-proj">📝 Ensayo</span><span class="chip chip-proj">🗣️ Debate</span><span class="chip chip-proj">📊 Multimedia</span><span class="chip chip-proj">🎨 Campaña</span></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="nexo" style="margin-top:1rem;">
+    <div style="font-size:1.2rem">🧡</div>
+    <div class="nexo-text"><strong>Valor formativo de la Unidad III:</strong> Desarrolla el juicio moral autónomo, el respeto por la diversidad de posiciones éticas y la responsabilidad ciudadana ante los desafíos tecnológicos y sociales contemporáneos. La filosofía como herramienta para vivir mejor.</div>
+  </div>
+</section>
+
+<div class="meander"></div>
+
+<!-- ══ S4: ACTIVIDADES ════════════════════════════════════════════ -->
+<section class="section u4" id="s4">
+  <div class="sec-header">
+    <div class="sec-label">Modelo pedagógico digital</div>
+    <div class="sec-title">Actividades por Tema</div>
+    <div class="sec-tagline">Múltiples entradas al conocimiento filosófico. Cada formato activa capacidades distintas.</div>
+  </div>
+  <div class="act-grid" style="margin:0 1.2rem 1.5rem;">
+
+    <div class="act-card">
+      <div class="act-icon">📖</div>
+      <div class="act-name">Material con ReadAloud</div>
+      <div class="act-ped">Texto segmentado con narración de voz sintetizada. El alumno avanza sección por sección a su ritmo.</div>
+      <span class="act-valor" style="color:var(--cyan);border-color:var(--cyan)">Comprensión lectora · Autonomía</span>
+    </div>
+
+    <div class="act-card">
+      <div class="act-icon">❓</div>
+      <div class="act-name">Quiz Cronometrado</div>
+      <div class="act-ped">10 preguntas · 40 segundos cada una · retroalimentación inmediata · aprobación: 70%.</div>
+      <span class="act-valor" style="color:var(--purple);border-color:var(--purple)">Evaluación · Perseverancia</span>
+    </div>
+
+    <div class="act-card">
+      <div class="act-icon">🔍</div>
+      <div class="act-name">Caza de Conceptos</div>
+      <div class="act-ped">5 niveles progresivos de dificultad. El alumno identifica y asocia conceptos clave del tema.</div>
+      <span class="act-valor" style="color:var(--gold);border-color:var(--gold)">Vocabulario · Curiosidad</span>
+    </div>
+
+    <div class="act-card">
+      <div class="act-icon">✏️</div>
+      <div class="act-name">Texto Cloze</div>
+      <div class="act-ped">12 espacios en blanco en un texto filosófico. Reponer palabras clave en contexto.</div>
+      <span class="act-valor" style="color:var(--orange);border-color:var(--orange)">Comprensión profunda · Atención</span>
+    </div>
+
+    <div class="act-card">
+      <div class="act-icon">🔤</div>
+      <div class="act-name">Crucigrama Filosófico</div>
+      <div class="act-ped">6 términos centrales con definición como pista. Convierte el estudio en un desafío lúdico.</div>
+      <span class="act-valor" style="color:var(--green);border-color:var(--green)">Definiciones · Satisfacción</span>
+    </div>
+
+    <div class="act-card">
+      <div class="act-icon">🗺️</div>
+      <div class="act-name">Mapa Conceptual</div>
+      <div class="act-ped">~30 nodos interactivos. El alumno completa relaciones entre conceptos del tema.</div>
+      <span class="act-valor" style="color:var(--teal);border-color:var(--teal)">Pensamiento sistémico · Síntesis</span>
+    </div>
+
+    <div class="act-card">
+      <div class="act-icon">🤖</div>
+      <div class="act-name">Diálogo con Filósofo IA</div>
+      <div class="act-ped">Conversación con un filósofo virtual (IA). El alumno formula preguntas y recibe respuestas en carácter.</div>
+      <span class="act-valor" style="color:var(--purple);border-color:var(--purple)">Asombro · Diálogo filosófico</span>
+    </div>
+
+    <div class="act-card">
+      <div class="act-icon">📌</div>
+      <div class="act-name">Proyecto Final de Unidad</div>
+      <div class="act-ped">Ensayo, afiche, debate o presentación multimedia. Individual o grupal. Con rúbrica y exposición oral.</div>
+      <span class="act-valor" style="color:var(--gold);border-color:var(--gold)">Creatividad · Compromiso</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="meander"></div>
+
+<!-- ══ S5: EVALUACIÓN ════════════════════════════════════════════ -->
+<section class="section" id="s5">
+  <div class="sec-header" style="opacity:0;transform:translateY(28px);transition:all 0.7s ease;">
+    <div class="sec-label" style="color:var(--teal)">Sistema de acreditación</div>
+    <div class="sec-title" style="background:linear-gradient(135deg,var(--teal),#00aaaa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Evaluación y Promoción</div>
+    <div class="sec-tagline">El proceso importa tanto como el resultado.</div>
+  </div>
+  <div class="ctx-box" style="border-left:none;">
+    <div class="ctx-box-inner" style="border-left:3px solid var(--teal);padding-left:1rem;">
+      <div class="ctx-label">📋 Condiciones para la promoción directa (eximición)</div>
+      <div class="ctx-text">El alumno deberá cumplir <strong style="color:var(--red)">todas</strong> las condiciones obligatorias y aprobar ambos proyectos finales con nota mínima de <strong style="color:var(--gold)">6 (seis)</strong>.</div>
+    </div>
+  </div>
+
+  <div class="eval-grid">
+    <table class="eval-table">
+      <thead>
+        <tr>
+          <th>Instrumento</th>
+          <th>Descripción</th>
+          <th>Condición</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>📱 Actividades digitales</strong></td>
+          <td>100% de actividades completadas en la app (verificable en Firebase). Todas las unidades.</td>
+          <td><em><span class="badge-req">Obligatorio</span></em></td>
+        </tr>
+        <tr>
+          <td><strong>📅 Asistencia mínima</strong></td>
+          <td>70% de presencia en el ciclo lectivo 2026.</td>
+          <td><em><span class="badge-req">Obligatorio</span></em></td>
+        </tr>
+        <tr>
+          <td><strong>📓 Carpeta completa</strong></td>
+          <td>Apuntes, trabajos prácticos y producciones escritas. Prolija y al día.</td>
+          <td><em><span class="badge-req">Obligatorio</span></em></td>
+        </tr>
+        <tr>
+          <td><strong>📌 Proyecto Final — Unidad II</strong></td>
+          <td>Producción integradora de Antropología Filosófica. Con rúbrica y exposición oral.</td>
+          <td><em><span class="badge-cal">Nota mínima 6</span></em></td>
+        </tr>
+        <tr>
+          <td><strong>📌 Proyecto Final — Unidad III</strong></td>
+          <td>Análisis ético de un dilema contemporáneo real. Con rúbrica y exposición oral.</td>
+          <td><em><span class="badge-cal">Nota mínima 6</span></em></td>
+        </tr>
+        <tr>
+          <td><strong>💬 Participación en clase</strong></td>
+          <td>Aportes en debate, diálogo socrático y puestas en común.</td>
+          <td><em><span class="badge-comp">Complementario</span></em></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="nexo" style="margin-top:1.5rem;">
+    <div style="font-size:1.2rem">ℹ️</div>
+    <div class="nexo-text">Se contempla <strong>recuperación</strong> para los proyectos finales. Los trabajos prácticos son <strong>100% obligatorios</strong> para la eximición. La participación activa en clase puede mejorar la calificación final.</div>
+  </div>
+</section>
+
+<div class="meander"></div>
+
+<!-- ══ FINAL ══════════════════════════════════════════════════════ -->
+<div class="final">
+  <div class="final-title">La filosofía no enseña respuestas.<br>Enseña a vivir con las preguntas.</div>
+  <div class="final-text">Tres unidades · Veinticinco temas · Una app · Proyectos finales · Diálogos con filósofos reales. Un año para pensar.</div>
+  <div class="final-footer">
+    Prof. Julio Alberto Lazarte · Filosofía 6.º Año · Escuela Amado Nicomedes Juri · Tucumán, Argentina<br>
+    Planificación Anual 2026 · © Uso educativo exclusivo
+  </div>
+</div>
+
+<script>
+// ── PARTICLES ────────────────────────────────────────────────────
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+let W, H, pts = [];
+function resize(){ W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+resize(); window.addEventListener('resize', resize);
+function rnd(a,b){ return a + Math.random()*(b-a); }
+function mkPt(){
+  const cols=['#f0c04035','#00e5ff28','#b44ffc20','#39ff7a18','#ff6b3518'];
+  return { x:rnd(0,W), y:rnd(0,H), r:rnd(0.5,2.2), vx:rnd(-0.12,0.12), vy:rnd(-0.18,-0.04),
+           c:cols[Math.floor(Math.random()*cols.length)], life:1, decay:rnd(0.0006,0.0018) };
+}
+for(let i=0;i<110;i++) pts.push(mkPt());
+function anim(){
+  ctx.clearRect(0,0,W,H);
+  pts.forEach((p,i)=>{ p.x+=p.vx; p.y+=p.vy; p.life-=p.decay;
+    if(p.life<=0||p.y<-5) pts[i]=mkPt();
+    ctx.save(); ctx.globalAlpha=p.life; ctx.fillStyle=p.c;
+    ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill(); ctx.restore();
+  });
+  requestAnimationFrame(anim);
+}
+anim();
+
+// ── REVEAL ───────────────────────────────────────────────────────
+const revEls = document.querySelectorAll('.sec-header,.ctx-box,.tema-card,.nexo,.act-card');
+const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }),{threshold:0.1});
+revEls.forEach(el=>io.observe(el));
+
+// ── CARD TOGGLE ──────────────────────────────────────────────────
+function toggleCard(trigger){
+  const card = trigger.parentElement;
+  const wasOpen = card.classList.contains('open');
+  card.closest('.cards-grid').querySelectorAll('.tema-card.open').forEach(c=>c.classList.remove('open'));
+  if(!wasOpen) card.classList.add('open');
+}
+
+// ── NAV ──────────────────────────────────────────────────────────
+function goSec(id){
+  const el = document.getElementById(id);
+  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+}
+const sections = ['s0','s1','s2','s3','s4','s5'].map(id=>document.getElementById(id));
+const tabs = document.querySelectorAll('.nav-tab');
+const navIO = new IntersectionObserver(es=>{
+  es.forEach(e=>{ if(e.isIntersecting){
+    const id=e.target.id;
+    tabs.forEach(t=>t.classList.remove('active'));
+    const act=document.querySelector(`.nav-tab[data-sec="${id}"]`);
+    if(act){ act.classList.add('active'); act.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'}); }
+  }});
+},{threshold:0.25});
+sections.forEach(s=>{if(s)navIO.observe(s);});
+
+// ── PROGRESS ─────────────────────────────────────────────────────
+window.addEventListener('scroll',()=>{
+  const d=document.documentElement;
+  document.getElementById('progressBar').style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+'%';
+});
+</script>
+</body>
+</html>

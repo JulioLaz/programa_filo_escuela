@@ -273,6 +273,27 @@ body{
 .final-text{font-family:'Crimson Pro',serif;font-size:1rem;color:#8880aa;font-style:italic;max-width:520px;margin:0 auto 1.5rem;line-height:1.7;}
 .final-footer{font-family:'Rajdhani',sans-serif;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--border);padding-top:1.2rem;}
 
+
+/* ── CARD LINKS ── */
+.card-links{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.8rem;}
+.card-link{
+  display:inline-flex;align-items:center;gap:0.4rem;
+  font-family:'Rajdhani',sans-serif;font-size:0.65rem;font-weight:700;
+  letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;
+  padding:0.35rem 0.85rem;border-radius:2px;transition:all 0.18s;
+}
+.card-link-tema{
+  background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.35);color:var(--cyan);
+}
+.card-link-tema:hover{background:rgba(0,229,255,0.18);border-color:var(--cyan);}
+.card-link-quiz{
+  background:rgba(240,192,64,0.08);border:1px solid rgba(240,192,64,0.35);color:var(--gold);
+}
+.card-link-quiz:hover{background:rgba(240,192,64,0.18);border-color:var(--gold);}
+.card-link-app{
+  background:rgba(180,79,252,0.08);border:1px solid rgba(180,79,252,0.35);color:var(--purple);
+}
+.card-link-app:hover{background:rgba(180,79,252,0.18);border-color:var(--purple);}
 /* ── KEYFRAMES ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:none;}}
 @keyframes bounce{0%,100%{transform:rotate(45deg) translateY(0);}50%{transform:rotate(45deg) translateY(5px);}}
@@ -397,6 +418,10 @@ body{
           <span class="chip chip-act">📅 Línea del tiempo interactiva</span>
           <span class="chip chip-act">📱 Móvil optimizado</span>
         </div>
+        <div class="card-links">
+          <a href="https://juliolaz.github.io/time_line/" target="_blank" class="card-link card-link-tema">&#128279; Ir al tema</a>
+          <a href="https://juliolaz.github.io/time_line_quiz/" target="_blank" class="card-link card-link-quiz">&#10067; Quiz Chronos</a>
+        </div>
       </div>
     </div>
 
@@ -419,6 +444,10 @@ body{
           <span class="chip chip-act">📖 Contenido interactivo</span>
           <span class="chip chip-act">🧩 Secciones navegables</span>
         </div>
+        <div class="card-links">
+          <a href="https://juliolaz.github.io/que_es_la_filosofia/" target="_blank" class="card-link card-link-tema">&#128279; Ir al tema</a>
+          <a href="https://juliolaz.github.io/que_es_la_filos_quiz/" target="_blank" class="card-link card-link-quiz">&#10067; Quiz Chronos</a>
+        </div>
       </div>
     </div>
 
@@ -440,6 +469,10 @@ body{
         <div class="chips">
           <span class="chip chip-act">7 capítulos</span><span class="chip chip-act">Cards interactivas</span><span class="chip chip-act">Términos griegos</span>
         </div>
+        <div class="card-links">
+          <a href="https://juliolaz.github.io/filo_intro/" target="_blank" class="card-link card-link-tema">&#128279; Ir al tema</a>
+          <a href="https://juliolaz.github.io/intro_filo_quiz/" target="_blank" class="card-link card-link-quiz">&#10067; Quiz Chronos</a>
+        </div> 
       </div>
     </div>
 
@@ -458,6 +491,10 @@ body{
           <div class="bs-label">Autores</div>
           <div class="bs-text">Aristóteles (asombro como inicio), Descartes (duda metódica y cogito), Karl Jaspers (situaciones límite como umbral de lo filosófico). Conecta la filosofía con experiencias vitales concretas del alumno.</div>
         </div>
+        <div class="card-links">
+          <a href="https://juliolaz.github.io/asombro_duda_situaciones/" target="_blank" class="card-link card-link-tema">&#128279; Ir al tema</a>
+          <a href="https://juliolaz.github.io/asombro_duda_quiz/" target="_blank" class="card-link card-link-quiz">&#10067; Quiz Chronos</a>
+        </div>
       </div>
     </div>
 
@@ -475,6 +512,10 @@ body{
         <div class="body-sec">
           <div class="bs-label">Contenido</div>
           <div class="bs-text">Sociedad del rendimiento (Han). Cómo los algoritmos moldean lo que pensamos y creemos. El problema de la verdad en las redes. Identidad digital y autenticidad. Filosofía aplicada al universo cotidiano del alumno.</div>
+        </div>
+        <div class="card-links">
+          <a href="https://juliolaz.github.io/filo_redes_sociales/" target="_blank" class="card-link card-link-tema">&#128279; Ir al tema</a>
+          <a href="https://juliolaz.github.io/filo_redes_quiz/" target="_blank" class="card-link card-link-quiz">&#10067; Quiz Chronos</a>
         </div>
       </div>
     </div>
@@ -511,6 +552,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Contenido</div><div class="bs-text">Introducción a la Antropología Filosófica. La paradoja de ser el único ser que se interroga sobre sí mismo. Perspectivas biológicas, culturales y filosóficas de "lo humano".</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -527,6 +569,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Autores</div><div class="bs-text">Heidegger (ser-para-la-muerte), Savater (el ser mortal), Hannah Arendt (vita activa). La convivencia como condición de lo humano. La muerte como hecho que dota de sentido a la vida.</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -543,6 +586,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Debate clásico</div><div class="bs-text">Platón: alma prisionera del cuerpo, inmortal, preexistente. Aristóteles: alma como forma del cuerpo (hilemorfismo), mortal con el cuerpo. El problema de la identidad personal y la conciencia.</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -559,6 +603,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Contenido</div><div class="bs-text">Desde Aristóteles (animal racional y político) hasta el humanismo cristiano (imago Dei), el Renacimiento (Pico della Mirandola), la Ilustración y el ser histórico de Hegel. Cómo cada época redefinió "lo humano".</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -575,6 +620,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Concepto clave</div><div class="bs-text">Alienación económica (el trabajador no es dueño del producto), política (el Estado como instrumento de clase) y religiosa (la religión como opio del pueblo). ¿Qué formas de alienación existen hoy en las redes, el consumo y la tecnología?</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span><span class="chip chip-act">🤖 Diálogo IA</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -591,6 +637,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Concepto clave</div><div class="bs-text">"Dios ha muerto" como diagnóstico cultural. El nihilismo y su superación. El Übermensch (superhombre) como aquel que crea sus propios valores. La voluntad de poder como afirmación de la vida.</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span><span class="chip chip-act">🤖 Diálogo IA</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -607,6 +654,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Concepto clave</div><div class="bs-text">La duda metódica como camino a la certeza absoluta. "Pienso, luego existo" (cogito ergo sum). El dualismo cartesiano mente/cuerpo y sus consecuencias. ¿Puede una IA pensar? ¿Puede dudar?</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -623,6 +671,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Autor</div><div class="bs-text">Ricardo Maliandi (1930–2015), filósofo argentino. El ser humano como el único animal que fabrica herramientas que luego lo transforman a él. La técnica como mediación entre el ser humano y la naturaleza. Ética de la responsabilidad tecnológica.</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -639,6 +688,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Autor</div><div class="bs-text">Fernando Savater (1947–). La muerte como el horizonte que da urgencia y sentido a la vida. A diferencia de los animales, el ser humano sabe que va a morir — y eso lo cambia todo. Relación con la ética y el proyecto personal.</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -655,6 +705,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Autor</div><div class="bs-text">Ernst Cassirer (1874–1945). El ser humano no responde al estímulo directamente sino a través de un sistema simbólico (lenguaje, mito, arte, ciencia, religión). Lo que nos hace humanos no es la razón sino la capacidad de crear y habitar mundos simbólicos.</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span><span class="chip chip-act">🤖 Diálogo IA</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -671,6 +722,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Autor</div><div class="bs-text">Jean-Paul Sartre (1905–1980). No hay naturaleza humana previa a la existencia: primero existimos, luego nos definimos. La libertad como condena: no podemos no elegir. La mala fe es el autoengaño para escapar de esa responsabilidad.</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span><span class="chip chip-act">🤖 Diálogo IA</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -726,6 +778,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Contenido</div><div class="bs-text">Ética como reflexión filosófica sobre el bien y el mal. Moral como conjunto de normas sociales. ¿Qué hace que una acción sea buena o mala? Dilemas morales cotidianos como punto de partida.</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -742,6 +795,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Concepto clave</div><div class="bs-text">La felicidad (eudaimonía) como plenitud de las capacidades propias, no como placer. La virtud como hábito que se aprende y practica. El "término medio" entre el exceso y el defecto. La prudencia (phronesis) como virtud máxima.</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span><span class="chip chip-act">🤖 Diálogo IA</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -758,6 +812,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Debate</div><div class="bs-text">Epicuro: el placer verdadero es la ataraxia (ausencia de dolor), no el placer desbordado. Aristipo: el placer presente y sensible como bien máximo. Bentham: cálculo hedonista para medir placeres y dolores. ¿El hedonismo justifica cualquier placer?</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -774,6 +829,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Concepto clave</div><div class="bs-text">Una acción es buena si maximiza la felicidad del mayor número de personas. Mill distingue placeres cualitativamente: "es mejor ser Sócrates insatisfecho que un cerdo satisfecho". Aplicaciones en políticas públicas, salud y dilemas contemporáneos.</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -790,6 +846,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Concepto clave</div><div class="bs-text">Una idea es verdadera si funciona, si produce resultados prácticos. Peirce: el significado de un concepto = sus consecuencias prácticas. James: la verdad como lo que es bueno para nosotros creer. Dewey: la educación como experiencia activa y transformadora.</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -806,6 +863,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Concepto clave</div><div class="bs-text">Actúa solo según aquella máxima que puedas querer que sea ley universal. La buena voluntad como único bien incondicional. Trata a las personas siempre como fines, nunca solo como medios. La dignidad humana como valor absoluto.</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span><span class="chip chip-act">🤖 Diálogo IA</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -822,6 +880,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Contenido</div><div class="bs-text">El ser humano como centro del universo (Renacimiento). Pico della Mirandola: "Dignidad del Hombre". El antropocentrismo moderno y sus consecuencias: dominio de la naturaleza, crisis ecológica. Críticas contemporáneas: biocentrismo, ecocentrismo.</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">✏️ Cloze</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🔤 Crucigrama</span><span class="chip chip-act">🗺️ Mapa</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
@@ -838,6 +897,7 @@ body{
       <div class="card-body">
         <div class="body-sec"><div class="bs-label">Autores</div><div class="bs-text">Harari (21 Lecciones), Floridi (Ética de la IA), Cortina (ética aplicada). ¿Puede una IA tomar decisiones morales? ¿Quién es responsable cuando un algoritmo discrimina? La dignidad humana como límite ético de la automatización.</div></div>
         <div class="chips"><span class="chip chip-act">📖 Material</span><span class="chip chip-act">❓ Quiz</span><span class="chip chip-act">🔍 Conceptos</span><span class="chip chip-act">🗺️ Mapa</span><span class="chip chip-act">🤖 Diálogo IA</span></div>
+        <div class="card-links"><a href="https://juliolaz.github.io/prueba_filo/" target="_blank" class="card-link card-link-app">&#127918; Abrir en prueba_filo</a></div>
       </div>
     </div>
 
